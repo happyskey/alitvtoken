@@ -3,9 +3,7 @@
 <div align="center">
 
 [![Stars](https://img.shields.io/github/stars/iLay1678/i-tools?style=flat)](https://github.com/iLay1678/i-tools)
-[![Forks](https://img.shields.io/github/forks/iLay1678/i-tools?style=flat)](https://github.com/iLay1678/i-tools)
-![GitHub Actions Workflow Status](https://img.shields.io/github/actions/workflow/status/iLay1678/i-tools/docker-build.yml)
-
+![badge](https://cnb.cool/ilay1678/i-tools/-/badge/git/latest/ci/status/tag_push)
 
 </div>
 
@@ -19,9 +17,7 @@
 3. **二维码生成**
    - 生成自定义二维码
 4. **JSON格式化工具**
-   - 强大的JSON处理工具，支持格式化、压缩、验证和统计分析
-   - 实时语法检查和错误提示
-   - 支持文件上传下载和一键复制
+   - JSON处理工具，支持格式化、压缩、验证和统计分析
 5. **敬请期待**
    - 更多工具正在开发中...
 
@@ -34,6 +30,11 @@
 ```
 docker run --name=i-tools -d -p 3000:3000 ghcr.io/ilay1678/i-tools:latest 
 ```
+国内镜像
+```
+docker run --name=i-tools -d -p 3000:3000 docker.cnb.cool/ilay1678/mirrors/i-tools:latest 
+```
+
 
 ## Cloudflare Pages 部署
 ### 1. Fork 项目仓库
