@@ -1,17 +1,5 @@
-# 帮助文档地址: https://docs.cnb.cool/zh/artifact/docker.html
-main:
-  push:
-    - services:
-        - docker
-      stages:
-        - name: 编译
-          image: oven/bun:latest
-          volumes:
-            - /workspace:/workspace:row
-          script: cd /workspace && bun install && bun run build
-        - name: docker login
-          script: docker login -u ${CNB_TOKEN_USER_NAME} -p "${CNB_TOKEN}" ${CNB_DOCKER_REGISTRY}
-        - name: docker build
-          script: docker build -t ${CNB_DOCKER_REGISTRY}/${CNB_REPO_SLUG_LOWERCASE}:${CNB_COMMIT} .
-        - name: docker push
-          script: docker push ${CNB_DOCKER_REGISTRY}/${CNB_REPO_SLUG_LOWERCASE}:${CNB_COMMIT}
+include:
+  - https://cnb.cool/ilay1678/templates/-/blob/main/ci/docker.cnb.yml
+  - https://cnb.cool/ilay1678/templates/-/blob/main/ci/docker.ghcr.yml
+  - https://cnb.cool/ilay1678/templates/-/blob/main/ci/sync_to_github.yml
+  - https://cnb.cool/ilay1678/templates/-/blob/main/ci/ide.node.yml
